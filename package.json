@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "author": "小宫同学 <gong1782523482@163.com>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-layout": "^6.38.15",
+    "antd": "^4.21.7",
+    "axios": "^0.27.2",
+    "classnames": "^2.3.1",
+    "lego-components-react": "^0.0.3",
+    "qs": "^6.11.0",
+    "react-color": "^2.19.3",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "umi": "^4.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-color": "^3.0.6",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.1.2"
+  }
+}
