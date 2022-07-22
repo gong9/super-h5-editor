@@ -1,21 +1,63 @@
-import { Link, Outlet } from 'umi';
-import styles from './index.less';
+import React from "react";
+import { Outlet } from "umi";
+import {
+  LaptopOutlined,
+  NotificationOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
+import type { MenuProps } from "antd";
+import { Breadcrumb, Layout, Menu } from "antd";
+import { SiderMenuData } from "../constant/siderMenuData";
 
-export default function Layout() {
-  return (
-    <div className={styles.navs}>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/docs">Docs</Link>
-        </li>
-        <li>
-          <a href="https://github.com/umijs/umi">Github</a>
-        </li>
-      </ul>
-      <Outlet />
-    </div>
-  );
-}
+import "antd/dist/antd.css";
+import './index.less'
+const { Header, Content, Sider } = Layout;
+
+const MenuDataProps: MenuProps["items"] = SiderMenuData.map((Menuitem, index) => {
+  const key = String(index + 1) as string;
+
+  return {
+    key: `sub${key}`,
+    icon: React.createElement(Menuitem.icon),
+    label: Menuitem.label,
+    children: Menuitem?.children || [],
+  };
+});
+
+const App: React.FC = () => (
+    <Layout className="main">
+      <Header className="header">
+        <div className="logo" />
+        <div className="header-title">lowcode 2b2c 编辑器</div>
+      </Header>
+      <Layout>
+        <Sider width={200} className="site-layout-background">
+          <Menu
+            mode="inline"
+            defaultSelectedKeys={["1"]}
+            defaultOpenKeys={["sub1"]}
+            style={{ height: "100%", borderRight: 0 }}
+            items={MenuDataProps}
+          />
+        </Sider>
+        <Layout style={{ padding: "0 24px 24px" }}>
+          <Breadcrumb style={{ margin: "16px 0" }}>
+            <Breadcrumb.Item>h5编辑器</Breadcrumb.Item>
+            <Breadcrumb.Item>编辑器</Breadcrumb.Item>
+          </Breadcrumb>
+          <Content
+            className="site-layout-background content-main"
+            style={{
+              padding: 24,
+              margin: 0,
+              minHeight: 280,
+            }}
+          >
+            <Outlet />
+          </Content>
+        </Layout>
+      </Layout>
+    </Layout>
+);
+
+export default App;

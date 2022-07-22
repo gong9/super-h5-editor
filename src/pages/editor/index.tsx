@@ -38,9 +38,9 @@ const EditorContainer: FC<EditorContainerProps> = () => {
 
   return (
     <div className="editor-container">
-      <div className="editor-top">
+      {/* <div className="editor-top">
         <EditorTop currentCacheCopm={currentCacheCopm} />
-      </div>
+      </div> */}
       <div className="editor-body">
         <div className="editor-body-left">
           <EditorLeft
@@ -73,7 +73,7 @@ const EditorContainer: FC<EditorContainerProps> = () => {
 
 const Main = () => {
   return (
-    <div className="main">
+    <div>
       <ErrorBoundary>
         <DndProvider backend={HTML5Backend}>
           <EditorContainer />

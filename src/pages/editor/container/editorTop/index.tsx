@@ -55,9 +55,6 @@ const Editor: FC<EditorProps> = ({ currentCacheCopm}) => {
 
   return (
     <div className="editor-top">
-      {/* 先占个位置 */}
-      <div></div>
-      <div className="editor-top-title">可视化编辑器——superH5</div>
       <div className="editor-top-operation">
         <Button onClick={() => openPreView(1)} type="primary" className="btn">
           预览

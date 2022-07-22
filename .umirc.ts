@@ -9,6 +9,6 @@ export default {
     //   wrappers: ["@/wrappers/auth"],
     // },
     // { exact: true, path: "/posts/:postId", component: "/posts/[postId]" },
-    // { path: "*", component: "404" },
+    { path: "*", component: "404" },
   ],
 };
