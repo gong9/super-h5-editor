@@ -8,9 +8,10 @@ export default {
   effects: {},
   reducers: {
     setCurrentCacheCopm(state, { payload }) {
+      debugger
       return {
         ...state,
-        currentCacheCopm: [...state.currentCacheCopm,payload.a],
+        currentCacheCopm: payload.currentCacheCopm,
       };
     },
   },

@@ -1,6 +1,8 @@
 //@ts-nocheck
 import { FC } from 'react';
 import { Form, Button } from 'antd';
+import { useSelector} from "@umijs/max";
+import { StateType } from "@/types/dvaTypes/index";
 import {
   SuperColor,
   SuperSeleter,
@@ -11,27 +13,28 @@ import { ComJsonType } from '../editorLeft';
 
 interface EditorConfigFormProps {
   compSchema: ComJsonType;
-  currentCacheCopm: ComJsonType[];
-  setCurrentCacheCopm: Function;
   compActiveIndex: number;
 }
 
 const EditorConfigForm: FC<EditorConfigFormProps> = ({
   compSchema,
-  currentCacheCopm,
   compActiveIndex,
 }) => {
   const { config, defaultConfig, name } = compSchema;
+  const { currentCanvasSchema } = useSelector((state: StateType) => {
+    const { h5_model_type } = state;
+    return { currentCanvasSchema: h5_model_type.currentCacheCopm };
+  });
   const onFinish = (values) => {
     // 找到当前组件在所有组件中的索引&通知iframe更新组件信息
-    currentCacheCopm[compActiveIndex] = {
+    currentCanvasSchema[compActiveIndex] = {
       ...compSchema,
       defaultConfig: values,
     };
 
     document
       .querySelector('#preview')
-      .contentWindow.postMessage({ currentCacheCopm }, '*');
+      .contentWindow.postMessage({ currentCanvasSchema }, '*');
   };
   return (
     Array.isArray(config) &&

@@ -1,14 +1,15 @@
 import { FC, useRef, memo } from 'react';
 import { useDrop } from 'react-dnd';
+//@ts-ignore
 import { XYCoord } from 'dnd-core';
+import { useSelector,useDispatch } from "@umijs/max";
+import { StateType } from "@/types/dvaTypes/index";
 import { ComJsonType } from '../editorLeft';
 import './index.less';
 
 interface DropProps {
   index: number;
   compInfo: ComJsonType;
-  setCurrentCacheCopm: Function;
-  currentCacheCopm: ComJsonType[];
 }
 /**
  * @file 画布涂层
@@ -16,10 +17,13 @@ interface DropProps {
 const Drop: FC<DropProps> = ({
   compInfo,
   index,
-  setCurrentCacheCopm,
-  currentCacheCopm,
 }) => {
   const currentCompRef = useRef(null);
+  const { currentCanvasSchema } = useSelector((state: StateType) => {
+    const { h5_model_type } = state;
+    return { currentCanvasSchema: h5_model_type.currentCacheCopm };
+  });
+  const dispatch = useDispatch()
   const [, drop] = useDrop(
     {
       accept: 'comp',
@@ -33,21 +37,26 @@ const Drop: FC<DropProps> = ({
           (clientOffset as XYCoord).y - hoverBoundingRect.top;
 
         if (hoverClientY > hoverMiddleY + 30) {
-          const occupantsIndex = currentCacheCopm.findIndex(
-            (compItem) => compItem.name === 'occupants',
+          const occupantsIndex = currentCanvasSchema.findIndex(
+            (compItem:any) => compItem.name === 'occupants',
           );
 
-          currentCacheCopm.splice(occupantsIndex, 1);
-          currentCacheCopm.splice(index, 0, {
+          currentCanvasSchema.splice(occupantsIndex, 1);
+          currentCanvasSchema.splice(index, 0, {
             name: 'occupants',
             description: '放到这里',
           });
 
-          setCurrentCacheCopm([...currentCacheCopm]);
+          dispatch({
+            type: "h5_model_type/setCurrentCacheCopm",
+            payload: {
+              currentCacheCopm:currentCanvasSchema,
+            },
+          });
         }
       },
     },
-    [currentCacheCopm, setCurrentCacheCopm, index],
+    [currentCanvasSchema,index],
   );
 
   return (
