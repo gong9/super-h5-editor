@@ -1,7 +1,7 @@
-// @ts-nocheck
-const handleErrorFun = () => {
-  // 一些错误处理
-};
+// // @ts-nocheck
+// const handleErrorFun = () => {
+//   // 一些错误处理
+// };
 
-// window.onerror(handleErrorFun);
-// window.error(handleErrorFun);
+// // window.onerror(handleErrorFun);
+// // window.error(handleErrorFun);

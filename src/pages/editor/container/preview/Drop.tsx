@@ -1,11 +1,11 @@
-import { FC, useRef, memo } from 'react';
-import { useDrop } from 'react-dnd';
-//@ts-ignore
-import { XYCoord } from 'dnd-core';
-import { useSelector,useDispatch } from "@umijs/max";
-import { StateType } from "@/types/dvaTypes/index";
-import { ComJsonType } from '../editorLeft';
-import './index.less';
+import { FC, useRef, memo } from 'react'
+import { useDrop } from 'react-dnd'
+// @ts-ignore
+import { XYCoord } from 'dnd-core'
+import { useSelector, useDispatch } from '@umijs/max'
+import { StateType } from '@/types/dvaTypes/index'
+import { ComJsonType } from '../editorLeft'
+import './index.less'
 
 interface DropProps {
   index: number;
@@ -16,61 +16,61 @@ interface DropProps {
  */
 const Drop: FC<DropProps> = ({
   compInfo,
-  index,
+  index
 }) => {
-  const currentCompRef = useRef(null);
+  const currentCompRef = useRef(null)
   const { currentCanvasSchema } = useSelector((state: StateType) => {
-    const { h5_model_type } = state;
-    return { currentCanvasSchema: h5_model_type.currentCacheCopm };
-  });
+    const { h5_model_type } = state
+    return { currentCanvasSchema: h5_model_type.currentCacheCopm }
+  })
   const dispatch = useDispatch()
   const [, drop] = useDrop(
     {
       accept: 'comp',
       hover: (_, monitor) => {
-        //@ts-ignore
-        const hoverBoundingRect = currentCompRef.current.getBoundingClientRect();
+        // @ts-ignore
+        const hoverBoundingRect = currentCompRef.current.getBoundingClientRect()
         const hoverMiddleY =
-          (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
-        const clientOffset = monitor.getClientOffset();
+          (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2
+        const clientOffset = monitor.getClientOffset()
         const hoverClientY =
-          (clientOffset as XYCoord).y - hoverBoundingRect.top;
+          (clientOffset as XYCoord).y - hoverBoundingRect.top
 
         if (hoverClientY > hoverMiddleY + 30) {
           const occupantsIndex = currentCanvasSchema.findIndex(
-            (compItem:any) => compItem.name === 'occupants',
-          );
+            (compItem:any) => compItem.name === 'occupants'
+          )
 
-          currentCanvasSchema.splice(occupantsIndex, 1);
+          currentCanvasSchema.splice(occupantsIndex, 1)
           currentCanvasSchema.splice(index, 0, {
             name: 'occupants',
-            description: '放到这里',
-          });
+            description: '放到这里'
+          })
 
           dispatch({
-            type: "h5_model_type/setCurrentCacheCopm",
+            type: 'h5_model_type/setCurrentCacheCopm',
             payload: {
-              currentCacheCopm:currentCanvasSchema,
-            },
-          });
+              currentCacheCopm: currentCanvasSchema
+            }
+          })
         }
-      },
+      }
     },
-    [currentCanvasSchema,index],
-  );
+    [currentCanvasSchema, index]
+  )
 
   return (
     <div ref={drop} className={compInfo.name}>
       <div ref={currentCompRef}>
         <div
           style={{ height: `${compInfo.clientHeight}px` }}
-          className="dropDemo"
+          className='dropDemo'
         >
           {compInfo.description}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default memo(Drop);
+export default memo(Drop)

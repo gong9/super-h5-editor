@@ -1,9 +1,7 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
-interface SuperSwitchProps {}
+const SuperSwitch: FC = () => {
+  return <div>这是一个Switch组件</div>
+}
 
-const SuperSwitch: FC<SuperSwitchProps> = () => {
-  return <div>这是一个Switch组件</div>;
-};
-
-export default SuperSwitch;
+export default SuperSwitch

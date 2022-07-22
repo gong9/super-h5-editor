@@ -1,4 +1,4 @@
-//@ts-nocheck
+// @ts-nocheck
 /**
  * 事件总线
  * 利用发布订阅处理非关联组件之间通信问题
@@ -6,7 +6,7 @@
 
 class EventEmitter {
   constructor() {
-    this.cache = {};
+    this.cache = {}
   }
 
   /**
@@ -15,26 +15,26 @@ class EventEmitter {
    * @param {function} fn
    */
   on = (name, fn) => {
-    this.cache[name] = fn;
-  };
+    this.cache[name] = fn
+  }
 
   /**
    * 发布
    * @param {string} eventname
    */
   emit = (name, ...args) => {
-    if (this.cache[name]) this.cache[name](...args);
-  };
+    if (this.cache[name]) this.cache[name](...args)
+  }
 
   off = (name, fn) => {
-    let tasks = this.cache[name];
+    const tasks = this.cache[name]
     if (tasks) {
-      const index = tasks.findIndex((f) => f === fn || f.callback === fn);
+      const index = tasks.findIndex((f) => f === fn || f.callback === fn)
       if (index >= 0) {
-        tasks.splice(index, 1);
+        tasks.splice(index, 1)
       }
     }
-  };
+  }
 }
 
-export default new EventEmitter();
+export default new EventEmitter()

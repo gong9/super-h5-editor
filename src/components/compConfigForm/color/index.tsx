@@ -1,56 +1,56 @@
-import { FC, useState, useEffect } from 'react';
-import { SketchPicker, ColorResult } from 'react-color';
-import classnames from 'classnames';
-import { color2rgba, rgbaObj2string } from '../../../utils/util';
+import { FC, useState, useEffect } from 'react'
+import { SketchPicker, ColorResult } from 'react-color'
+import classnames from 'classnames'
+import { color2rgba, rgbaObj2string } from '../../../utils/util'
 
-import './index.less';
+import './index.less'
 
 interface SuperColorProps {
-  onChange: Function;
+  onChange: any;
   defaultConfig: string;
 }
 
-const SuperColor: FC<SuperColorProps> = ({ onChange, defaultConfig }) => {
-  const [color, setColor] = useState<string>(() => color2rgba('000000', 1));
-  const [hideSeletor, setHideSeletor] = useState(true);
+const SuperColor: FC<SuperColorProps> = ({ onChange }) => {
+  const [color, setColor] = useState<string>(() => color2rgba('000000', 1))
+  const [hideSeletor, setHideSeletor] = useState(true)
+
+  /** 颜色选择器的隐藏逻辑 */
+  const hideSeletorHandle = (e: any) => {
+    const isTagetNode = document
+      .querySelector('.sketch-picker')
+      ?.contains(e.target)
+
+    if (!isTagetNode) {
+      setHideSeletor(true)
+    }
+  }
 
   useEffect(() => {
     document
       .querySelector('.editor-body-right')
-      ?.addEventListener('click', hideSeletorHandle);
+      ?.addEventListener('click', hideSeletorHandle)
 
     return () => {
       document
         .querySelector('.editor-body-right')
-        ?.removeEventListener('click', hideSeletorHandle);
-    };
-  }, []);
+        ?.removeEventListener('click', hideSeletorHandle)
+    }
+  }, [])
 
   const changeColor = (color: ColorResult) => {
-    onChange(rgbaObj2string(color.rgb));
-    setColor(rgbaObj2string(color.rgb));
-  };
-
-  /** 颜色选择器的隐藏逻辑 */
-  const hideSeletorHandle = (e: any) => {
-    let isTagetNode = document
-      .querySelector('.sketch-picker')
-      ?.contains(e.target);
-
-    if (!isTagetNode) {
-      setHideSeletor(true);
-    }
-  };
+    onChange(rgbaObj2string(color.rgb))
+    setColor(rgbaObj2string(color.rgb))
+  }
 
   return (
-    <div className="super-color">
+    <div className='super-color'>
       <div
-        className="super-color-demo"
+        className='super-color-demo'
         style={{
-          background: `${color}`,
+          background: `${color}`
         }}
         onClick={() => {
-          setHideSeletor(false);
+          setHideSeletor(false)
         }}
       ></div>
 
@@ -60,7 +60,7 @@ const SuperColor: FC<SuperColorProps> = ({ onChange, defaultConfig }) => {
         onChange={changeColor}
       />
     </div>
-  );
-};
+  )
+}
 
-export default SuperColor;
+export default SuperColor

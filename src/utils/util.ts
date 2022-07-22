@@ -1,15 +1,15 @@
-//@ts-nocheck
+// @ts-nocheck
 
 /** 防抖 */
 export const debounce = (fn, wait = 20) => {
-  let timeout = null;
+  let timeout = null
   return (...args) => {
-    if (timeout) clearTimeout(timeout);
+    if (timeout) clearTimeout(timeout)
     timeout = setTimeout(() => {
-      fn(args);
-    }, wait);
-  };
-};
+      fn(args)
+    }, wait)
+  }
+}
 
 /** 16进制转rgba */
 export const color2rgba = (color: string, opacity) => {
@@ -23,10 +23,10 @@ export const color2rgba = (color: string, opacity) => {
     ',' +
     opacity +
     ')'
-  );
-};
+  )
+}
 
 /** rgba对象转rgba字符串 */
 export const rgbaObj2string = (rgbaObj) => {
-  return `rgba(${rgbaObj.r},${rgbaObj.g},${rgbaObj.b},${rgbaObj.a})`;
-};
+  return `rgba(${rgbaObj.r},${rgbaObj.g},${rgbaObj.b},${rgbaObj.a})`
+}

@@ -2,15 +2,15 @@ import h5_model_type from '@/types/dvaTypes/h5_model_type'
 
 export default {
   state: {
-    currentCacheCopm: [],
+    currentCacheCopm: []
   },
   effects: {},
   reducers: {
     setCurrentCacheCopm(state, { payload }) {
       return {
         ...state,
-        user: payload,
-      };
-    },
+        user: payload
+      }
+    }
   }
-} as h5_model_type;
+} as h5_model_type

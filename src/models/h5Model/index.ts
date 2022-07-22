@@ -1,18 +1,17 @@
-import H5_model_type from "@/types/dvaTypes/h5_model_type";
+import H5_model_type from '@/types/dvaTypes/h5_model_type'
 
 export default {
-  namespace: "h5_model_type",
+  namespace: 'h5_model_type',
   state: {
-    currentCacheCopm: [],
+    currentCacheCopm: []
   },
   effects: {},
   reducers: {
     setCurrentCacheCopm(state, { payload }) {
-      debugger
       return {
         ...state,
-        currentCacheCopm: payload.currentCacheCopm,
-      };
-    },
-  },
-} as H5_model_type;
+        currentCacheCopm: payload.currentCacheCopm
+      }
+    }
+  }
+} as H5_model_type

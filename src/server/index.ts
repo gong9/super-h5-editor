@@ -1,5 +1,5 @@
-import request from './service';
-import apiServeUrl from './config';
+import request from './service'
+import apiServeUrl from './config'
 
 /**
  * 关于接口为啥需要函数包裹一层
@@ -7,11 +7,11 @@ import apiServeUrl from './config';
  */
 
 export const saveSchema = (params = {}) => {
-  const url = apiServeUrl.qa.concat('/schema/save');
-  return request.post(url, { params });
-};
+  const url = apiServeUrl.qa.concat('/schema/save')
+  return request.post(url, { params })
+}
 
 export const downloadSchema = () => {
-  const url = apiServeUrl.qa.concat('/schema/download');
-  return request.get(url);
-};
+  const url = apiServeUrl.qa.concat('/schema/download')
+  return request.get(url)
+}
