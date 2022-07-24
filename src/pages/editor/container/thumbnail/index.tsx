@@ -74,10 +74,9 @@ const Thumbnail: FC<ThumbnailProps> = ({ compInfo }) => {
   }, [isDragging])
 
   return (
-    <div ref={drag}>
-      <img className='thum-preview' src={compInfo.pic} alt='组件缩略图' />
+    <div ref={drag} className='thumbnail'>
+      {compInfo.description}
     </div>
   )
 }
-
 export default memo(Thumbnail)

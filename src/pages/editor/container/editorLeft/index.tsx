@@ -1,5 +1,4 @@
 import { FC, memo } from 'react'
-import { Collapse } from 'antd'
 import Thumbnail from '../thumbnail'
 import './index.less'
 
@@ -14,24 +13,25 @@ export interface ComJsonType {
   pic?: string;
   clientHeight?: number;
 }
-const { Panel } = Collapse
 
 const EditorLeft: FC<EditorLeftProps> = ({
   schameMap
 }) => {
   return (
     <div className='editor-left'>
-      <Collapse className='Collapse' ghost={true}>
+      <h3>简单组件</h3>
+
+      <div className='thumbnail-components'>
         {schameMap.map((item: any) => {
           return (
-            <Panel header={item.name} key={item.name}>
-              <Thumbnail
-                compInfo={item}
-              />
-            </Panel>
+            <Thumbnail
+              key={item.compId}
+              compInfo={item}
+            />
           )
         })}
-      </Collapse>
+      </div>
+
     </div>
   )
 }
