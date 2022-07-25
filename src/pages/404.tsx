@@ -1,15 +1,11 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react'
 
-interface NotFoundProps {
-    
-}
- 
-const NotFound: FunctionComponent<NotFoundProps> = () => {
-    return (
-        <div>
+const NotFound: FunctionComponent = () => {
+  return (
+    <div>
             404
-        </div>
-      );
+    </div>
+  )
 }
- 
-export default NotFound;
+
+export default NotFound
