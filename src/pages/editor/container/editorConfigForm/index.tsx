@@ -31,10 +31,9 @@ const EditorConfigForm: FC<EditorConfigFormProps> = ({
       ...compSchema,
       defaultConfig: values
     }
-
     document
       .querySelector('#preview')
-      .contentWindow.postMessage({ currentCanvasSchema }, '*')
+      .contentWindow.postMessage({ currentCacheCopm: currentCanvasSchema }, '*')
   }
   return (
     Array.isArray(config) &&
