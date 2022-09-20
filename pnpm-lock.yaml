@@ -14,7 +14,7 @@ specifiers:
   classnames: ^2.3.1
   dva-type: ^1.0.3
   eslint: ^8.20.0
-  lego-components-react: ^0.0.5
+  lego-components-react: ^0.0.8
   prettier: ^2.7.1
   qs: ^6.11.0
   react-color: ^2.19.3
@@ -33,7 +33,7 @@ dependencies:
   axios: 0.27.2
   classnames: 2.3.1
   dva-type: 1.0.3_typescript@4.7.4
-  lego-components-react: 0.0.5
+  lego-components-react: 0.0.8
   prettier: 2.7.1
   qs: 6.11.0
   react-color: 2.19.3
@@ -5615,8 +5615,8 @@ packages:
   /known-css-properties/0.25.0:
     resolution: {integrity: sha512-b0/9J1O9Jcyik1GC6KC42hJ41jKwdO/Mq8Mdo5sYN+IuRTXs2YFHZC3kZSx6ueusqa95x3wLYe/ytKjbAfGixA==}
 
-  /lego-components-react/0.0.5:
-    resolution: {integrity: sha512-zKC8vsaZdS+8swZ+S7maU1bWZUjAWStWis/p62oYu7JS20z+GzRFGtszRg0WlRVjOrGkei1Rcnmxs1Eumvxowg==}
+  /lego-components-react/0.0.8:
+    resolution: {integrity: sha512-25Uru9/+EZxRZ2jytyZoQpDwUNgHHr2WlpbLO9gTZPC5jkKHGKKqIOyQ08rKtq86vE1MLtO9hBzJ3S/gitu/GQ==}
     requiresBuild: true
     peerDependencies:
       react: ^17.0.0

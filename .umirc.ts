@@ -11,7 +11,6 @@ export default {
         }
       ]
     },
-    { exact: true, path: "/vue", microApp: 'vue-lowcode-view', },
     // {
     //   exact: true,
     //   path: "/user",
@@ -21,15 +20,5 @@ export default {
     // { exact: true, path: "/posts/:postId", component: "/posts/[postId]" },
     { path: "*", component: "404" },
   ],
-  qiankun: {
-    master: {
-      apps: [
-        {
-          name: "vue-lowcode-view",
-          entry: "//localhost:8001",
-        }
-      ],
-    },
-  },
   dva: {}
 };

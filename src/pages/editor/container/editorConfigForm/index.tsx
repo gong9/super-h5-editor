@@ -68,12 +68,6 @@ const EditorConfigForm: FC<EditorConfigFormProps> = ({
 
           return (
             <Form.Item key={name} label={label} name={name}>
-              {/* 这里antd的表单项会给自组件注入属性，下面函数式调用组件传参的方式不可使用 */}
-
-              {/* {SuperFormItem({
-                defaultConfig: defaultConfig[name],
-                value,
-              })} */}
               <SuperFormItem defaultConfig={defaultConfig[name]} />
             </Form.Item>
           )

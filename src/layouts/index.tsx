@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet, useNavigate } from 'umi'
+import { Outlet, useNavigate } from '@umijs/max'
 import type { MenuProps } from 'antd'
 import { Breadcrumb, Layout, Menu } from 'antd'
 import { SiderMenuData } from '../constant/siderMenuData'

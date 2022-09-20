@@ -19,6 +19,7 @@ const PreView: FC<PreViewProps> = ({ iframeScrollY }) => {
     const { h5_model_type } = state
     return { currentCanvasSchema: h5_model_type.currentCacheCopm }
   })
+
   useEffect(() => {
     // 订阅[监听]是否开始拖拽，以便于判断是否展示iframe浮层
     eventbus.on('watchDragState', (dragState: boolean) => {
@@ -49,7 +50,7 @@ const PreView: FC<PreViewProps> = ({ iframeScrollY }) => {
       </div>
 
       <iframe
-        src='http://localhost:3001/#/preview'
+        src='http://localhost:3000/#/preview'
         width='100%'
         scrolling='yes'
         frameBorder='0'

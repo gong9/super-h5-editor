@@ -1,0 +1,595 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "private": true,
+      "author": "小宫同学 <gong1782523482@163.com>",
+      "scripts": {
+        "dev": "max dev",
+        "build": "max build",
+        "postinstall": "max setup",
+        "setup": "max setup",
+        "start": "npm run dev",
+        "lint": "max lint"
+      },
+      "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+      },
+      "dependencies": {
+        "@ant-design/icons": "^4.7.0",
+        "@ant-design/pro-layout": "^6.38.15",
+        "@umijs/max": "^4.0.8",
+        "@umijs/plugin-qiankun": "^2.39.2",
+        "antd": "^4.21.7",
+        "axios": "^0.27.2",
+        "classnames": "^2.3.1",
+        "dva-type": "^1.0.3",
+        "lego-components-react": "^0.0.7",
+        "prettier": "^2.7.1",
+        "qs": "^6.11.0",
+        "react-color": "^2.19.3",
+        "react-dnd": "^16.0.1",
+        "react-dnd-html5-backend": "^16.0.1",
+        "redux": "^4.2.0"
+      },
+      "devDependencies": {
+        "@types/react": "^18.0.15",
+        "@types/react-color": "^3.0.6",
+        "@types/react-dom": "^18.0.6",
+        "@umijs/lint": "^4.0.8",
+        "eslint": "^8.20.0",
+        "stylelint": "^14.9.1",
+        "typescript": "^4.1.2"
+      }
+    },
+    "prefix": "/Users/gongzhen/code/me/super-h5-editor"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/gongzhen/Library/pnpm/store/v3",
+    "virtualStoreDir": "/Users/gongzhen/code/me/super-h5-editor/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/gongzhen/code/me/super-h5-editor",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/@types/react/18.0.15",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/react",
+      "rawSpec": "^18.0.15"
+    }
+  },
+  "5 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/@types/react-color/3.0.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/react-color",
+      "rawSpec": "^3.0.6"
+    }
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/@types/react-dom/18.0.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/react-dom",
+      "rawSpec": "^18.0.6"
+    }
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/@umijs/lint/4.0.8",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@umijs/lint",
+      "rawSpec": "^4.0.8"
+    }
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/eslint/8.20.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint",
+      "rawSpec": "^8.20.0"
+    }
+  },
+  "9 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/stylelint/14.9.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "stylelint",
+      "rawSpec": "^14.9.1"
+    }
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/typescript/4.7.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "typescript",
+      "rawSpec": "^4.1.2"
+    }
+  },
+  "11 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/@ant-design/icons/4.7.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ant-design/icons",
+      "rawSpec": "^4.7.0"
+    }
+  },
+  "12 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/@ant-design/pro-layout/6.38.15",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ant-design/pro-layout",
+      "rawSpec": "^6.38.15"
+    }
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/@umijs/max/4.0.8",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@umijs/max",
+      "rawSpec": "^4.0.8"
+    }
+  },
+  "14 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/@umijs/plugin-qiankun/2.39.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@umijs/plugin-qiankun",
+      "rawSpec": "^2.39.2"
+    }
+  },
+  "15 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/antd/4.21.7",
+    "wanted": {
+      "dependentId": ".",
+      "name": "antd",
+      "rawSpec": "^4.21.7"
+    }
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/axios/0.27.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "axios",
+      "rawSpec": "^0.27.2"
+    }
+  },
+  "17 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/classnames/2.3.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "classnames",
+      "rawSpec": "^2.3.1"
+    }
+  },
+  "18 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/dva-type/1.0.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "dva-type",
+      "rawSpec": "^1.0.3"
+    }
+  },
+  "19 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/prettier/2.7.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "prettier",
+      "rawSpec": "^2.7.1"
+    }
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/qs/6.11.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "qs",
+      "rawSpec": "^6.11.0"
+    }
+  },
+  "21 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/react-color/2.19.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-color",
+      "rawSpec": "^2.19.3"
+    }
+  },
+  "22 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/react-dnd/16.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-dnd",
+      "rawSpec": "^16.0.1"
+    }
+  },
+  "23 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/react-dnd-html5-backend/16.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-dnd-html5-backend",
+      "rawSpec": "^16.0.1"
+    }
+  },
+  "24 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmmirror.com/redux/4.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "redux",
+      "rawSpec": "^4.2.0"
+    }
+  },
+  "25 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@types/react/18.0.15",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "26 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@types/react/18.0.15",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "27 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@types/react-dom/18.0.6",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "28 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@types/react-dom/18.0.6",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "29 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@types/react-color/3.0.6",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "30 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@types/react-color/3.0.6",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "31 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@umijs/lint/4.0.8",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "32 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@umijs/lint/4.0.8",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "33 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/stylelint/14.9.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "34 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/stylelint/14.9.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "35 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/eslint/8.20.0",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "36 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/eslint/8.20.0",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "37 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/typescript/4.7.4",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "38 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/typescript/4.7.4",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "39 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@ant-design/pro-layout/6.38.15",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "40 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@ant-design/pro-layout/6.38.15",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "41 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@umijs/plugin-qiankun/2.39.2",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "42 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@umijs/plugin-qiankun/2.39.2",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "43 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@umijs/max/4.0.8",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "44 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@umijs/max/4.0.8",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "45 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/qs/6.11.0",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "46 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/qs/6.11.0",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "47 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/classnames/2.3.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "48 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/classnames/2.3.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "49 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/dva-type/1.0.3",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "50 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/dva-type/1.0.3",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "51 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/axios/0.27.2",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "52 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/axios/0.27.2",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "53 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/prettier/2.7.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "54 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/prettier/2.7.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "55 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/react-color/2.19.3",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "56 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/react-color/2.19.3",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "57 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/redux/4.2.0",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "58 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/redux/4.2.0",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "59 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/react-dnd-html5-backend/16.0.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "60 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/react-dnd-html5-backend/16.0.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "61 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/react-dnd/16.0.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "62 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/react-dnd/16.0.1",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "63 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/antd/4.21.7",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "64 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/antd/4.21.7",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "65 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@ant-design/icons/4.7.0",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "found_in_store"
+  },
+  "66 debug pnpm:progress": {
+    "packageId": "registry.npmmirror.com/@ant-design/icons/4.7.0",
+    "requester": "/Users/gongzhen/code/me/super-h5-editor",
+    "status": "resolved"
+  },
+  "67 error pnpm": {
+    "code": "ERR_PNPM_NO_MATCHING_VERSION",
+    "packageMeta": {
+      "dist-tags": {
+        "latest": "0.0.6"
+      },
+      "modified": "2022-07-27T16:04:38.026Z",
+      "name": "lego-components-react",
+      "versions": {
+        "0.0.2": {
+          "name": "lego-components-react",
+          "version": "0.0.2",
+          "peerDependencies": {
+            "react": "^17.0.0",
+            "react-dom": "^17.0.0"
+          },
+          "directories": {},
+          "dist": {
+            "integrity": "sha512-b7ucv4/QNtVfluslEcGsG5+dPlCDyFKtXoo9AWLQazF25UgTm+WStC7Dfahnedx7fihMZKvBuGAMus0ev7eFuQ==",
+            "shasum": "fb7c1a7c73ceccaa926dcf283a1c61fe6e862835",
+            "tarball": "https://registry.npmmirror.com/lego-components-react/-/lego-components-react-0.0.2.tgz",
+            "fileCount": 2,
+            "unpackedSize": 756,
+            "signatures": [
+              {
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+                "sig": "MEUCIAfn7zapfI+pl5NFzMnlT7WKJL6Th/KEc+Nj52Mu4VDXAiEA6aWbSqfcMhQ6Z8+yUvE7vRA4rg6+KPAjXhQYajkBkFU="
+              }
+            ],
+            "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJi2PjlACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpD8w//Yf/cgAIAgpjMihWjeOsgTRTbNV4foeWT7yZ809eBTGr3ybEg\r\n92HRPZ273e6q7ZpEe6o5rL/Q36UFyTX9G6jf/7cT63JmxaR6gtqOXSgb3hen\r\ndMZcT5+NRR932f/MeL4Cbpf9PfSTsbxPJ1+zk9xsw8s1bAXJejkwjBVdTJ91\r\nBqryPSPLwJl3S7AbEZXM16kxbPqlpM26HWcVPbeRLGWbMSDzkFQkXOaUzpdc\r\n8Qjsz3uIsvVXkdAKVosoqoOufv5rMuuGj0XJKqEvARH5gIbTR13o9woJAKyB\r\nrPzUuz7Hd7XRBX1TQehqf2qqWNH2+0q8F1Ovnv7QWOF2Absb/M6ei22Badv+\r\nqkROD6d6i5nLGLS7DXDrF7DfIW0GYoe/SE9rDmIK6hvCHloggabnCaSDya2x\r\nv9Cvtqz6Hv1hCCfyNsE7lByl31GAkPNEeFy+JZXKJSnIfvzTCwTGwknxUq/m\r\ntOPNYUCnB1JKDKFQHCJ1rlIKIU/32Csg5VPRC1f8o3fmXA21ylfdZ7GEc7pQ\r\n3mLzaS/ls5tUCCkZFiJ+Lmc+cOiPULmHW0/TMKTeCDfmC087wPPdUToqXC63\r\nZeqhUl5tqFax57UjPpR5Rs8NJk/TyqDP4V4b74NJgYEmGrgqTFp+CjG5DRXD\r\n3/eb1SCDZvisti0MV5Jd/7AEtFxXUE+56Ic=\r\n=BiFd\r\n-----END PGP SIGNATURE-----\r\n",
+            "size": 527
+          },
+          "_hasShrinkwrap": false,
+          "hasInstallScript": true
+        },
+        "0.0.3": {
+          "name": "lego-components-react",
+          "version": "0.0.3",
+          "peerDependencies": {
+            "react": "^17.0.0",
+            "react-dom": "^17.0.0"
+          },
+          "directories": {},
+          "dist": {
+            "integrity": "sha512-+NM+nuu/ZtmQoefiwGOpsN3rx+CfhsgZaGpRVb8F4Aq1jMvWX2RBnCrHNRPHSl91uKF1Ky+PKRQ7CVpg80KVqw==",
+            "shasum": "dc7c98cf91c9882c0bdde589b96dbcc781707b0e",
+            "tarball": "https://registry.npmmirror.com/lego-components-react/-/lego-components-react-0.0.3.tgz",
+            "fileCount": 4,
+            "unpackedSize": 8599,
+            "signatures": [
+              {
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+                "sig": "MEQCIBCtkXEjzS0uObHWpIAjGwqH1L5gN0AZ26jX3XyrCi7fAiB/Aud50VWyuYhg38I8TjTtxUPC/mJV/YtDmzzuZZAsbg=="
+              }
+            ],
+            "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJi2QcwACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmp/5w/+OsvNDzIMOSir/8wRVVgatj+yKbQuyohm/xO8aGXP+4ELJ7Rp\r\n/sEaDiMjk/C8JC2JoPp8ebxHLm7KVFjnYXcTxz2YKin9SQmXigtcHpDpauz3\r\nr0BtIJPHDUrOk1ogq49xmtm5pj94W/7afSblO24VBGk60EKIHf+2zAACiLBg\r\nhwtBJSpNePYMykKlNcTRJi1ebVl6PB1pDU6+4PD+Mjxgmn2rCb876ssNeBQx\r\nQTh82OrzRzJWCVHBwaMjtZEFfAtQp0TDDjs7VLta70879TWfWijuzvpI80uB\r\noD4tadOTIv15wUz0LKoBtZFoN7ZqIUVw5g9XrmYl64GR+fFCsejX9PZ4J8Rc\r\nfjI35dipne9aDMuxOkwJsVV7dxxyCjdTcrjCLO6J5owBCYx+gValetSA16wi\r\nKXS33LPfCQa5hpEXdmo+b5fTOmfGfHe7EbST4mzer9Nc9TOykLcn63+pxeMr\r\nVJzcNiLpeR4Oh5YNZRPBuZiuIKARbULseTXqWrPLYhlmuVabYlWfiK+1oeOt\r\nlppFD0izJRHiIiUi3Y94jGD05hYZ7zvrR5rTzF3SemkNqE0vaGX1ZDKizJ17\r\nsbOslKVhTwMbA9hgdglKAbvATWkLzr5suOELrjTSZ4EjNEMJCDTF/ysKrmZk\r\nkklLgLXXQcObCvfh1Wqg5qJbTc0SIGi4fv4=\r\n=MM1V\r\n-----END PGP SIGNATURE-----\r\n",
+            "size": 3389
+          },
+          "_hasShrinkwrap": false,
+          "hasInstallScript": true
+        },
+        "0.0.4": {
+          "name": "lego-components-react",
+          "version": "0.0.4",
+          "dependencies": {
+            "@nutui/nutui-react": "^1.1.4"
+          },
+          "peerDependencies": {
+            "react": "^17.0.0",
+            "react-dom": "^17.0.0"
+          },
+          "directories": {},
+          "dist": {
+            "integrity": "sha512-Se4r95xdqt1D2c6HoC7M9mm0+c/mJDAzr/CJbZsT9ICW43qDmQjU6V9zL7giqU1E+MFlya4QsQM6gG1icnHsCQ==",
+            "shasum": "f8035e8ad3fa8b0d1e4062aebcc170f4b3367499",
+            "tarball": "https://registry.npmmirror.com/lego-components-react/-/lego-components-react-0.0.4.tgz",
+            "fileCount": 4,
+            "unpackedSize": 9828,
+            "signatures": [
+              {
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+                "sig": "MEQCICv0DvPSK+BU8MYEIJUY/nO/LHeYPbqDNf+DjmRCu/R6AiBrKcbCpmEE+sqZUR2ZEv+vO+xskaE8fbMuFIqVA0c9Tg=="
+              }
+            ],
+            "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJi3gk7ACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrRyBAAjSNPi4DmeJlm/DfxE0Xn4Sd2LJ7zttQGcSkOVBVsSaB1DMwC\r\ntDUIuDJpAQ9MLcZ0+/I4L2VHV/iH5csKdXlOdUrDwWDi+2Pz6dKOQF8m5bEU\r\nE1eHdgwg8fR/0RW4DlBBQ6o9V9zaQVEMqoyyedNLPbjKoNleAeezlLIqsxhq\r\nE923hqlubqwng3SgT34q1V6wq5UvWfoYQ46ZybCdrvLUisi3/qjHc2WCAoZM\r\nRNOxY7B5IYq7f8ROOHgrTv3mH9b4ZMqQEwRVt27PZppu2hyyjbNzOKgrszh+\r\n8G6fshgu2iPJeKrTBzkNWV9yxpB6pXXVkZXeqFdbv0MfPSDxZ82rpJxCeLdV\r\niZ1Nd5GeZSJUtqWhNBKt8TZ7vwWPD1aJHsAHqfjmqqBS8wSe8N+5/b4XmV+q\r\nRftZR4g6SoDFTGN4n75DLBNoY91An2usx0SI4Axsl19jUa9EukerOc64UBQq\r\nPq9eMau4zjvNsIVzDo6h7sPWBaCMAMYPwKdIsJRrZ02yJJ3RTei1P9Ls6jxE\r\nt2na2sRXFnjUmAQUw3dEpqdTvA4MgCu3jeDU2e8jSY8ryk9pSioQo6V36Ney\r\n2Y6r3M9+6CJPviKQxpkFU+P3D/t3w2oWcHaaLnUNSoPUtUI7wTxiyrhYd3Fi\r\nfdyWXqQaW1otImXWofaCTTnCxRs/SuhsgZA=\r\n=4uPf\r\n-----END PGP SIGNATURE-----\r\n",
+            "size": 3662
+          },
+          "_hasShrinkwrap": false,
+          "hasInstallScript": true
+        },
+        "0.0.5": {
+          "name": "lego-components-react",
+          "version": "0.0.5",
+          "dependencies": {
+            "@nutui/nutui-react": "^1.1.4"
+          },
+          "peerDependencies": {
+            "react": "^17.0.0",
+            "react-dom": "^17.0.0"
+          },
+          "directories": {},
+          "dist": {
+            "integrity": "sha512-zKC8vsaZdS+8swZ+S7maU1bWZUjAWStWis/p62oYu7JS20z+GzRFGtszRg0WlRVjOrGkei1Rcnmxs1Eumvxowg==",
+            "shasum": "d79a18a5ca6c29e4397c269d517be56be4501e18",
+            "tarball": "https://registry.npmmirror.com/lego-components-react/-/lego-components-react-0.0.5.tgz",
+            "fileCount": 3,
+            "unpackedSize": 9405,
+            "signatures": [
+              {
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+                "sig": "MEYCIQCON11FJ3w5jQijCuWl5//OQSiwMwPZwG5aGpOYUzqCrQIhAOs7tzEmTo1yrvu4Zd0REFf37YOzgVpte7mxKR7Okc6p"
+              }
+            ],
+            "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJi3hW9ACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmptVRAAn7CpJp6FBTWw+8LYLXH3O74LaZQ7koxTqP3YerWA/cTpVOjh\r\nZ/H5m4hZ7xPQiNAK5NLPVGNwG0Jrqs7/PKDdZ2fFHV9fAQFu1oiZLppOrqPS\r\nGC0Vlse4w9W/gOHBM6os8pkwEFEZkERISrZya5yNrR3cr7Qzcb5J2vbdm5pg\r\nKreyLbdB851U9CRouS4r5zoiJGoXKZwmVIicMLG1VnpzRdJQj6GdZ5SGbywW\r\nhkz2dUfbJtdFP3nC+TEj6VtzN8s56bx9nCouCcJoJ9FohdVOzlcOKBzXGhIe\r\nD2irV86EFY/NDPewUOWDJ1LIhFWFGNBGSGh7gWhV0Z0CExUze0kZWpjwoebF\r\nbCZ0QVEghwT0p5hUg0qLI1qZYUHSTMwYFIqJ9F5HsB1IyWntex6XBoWgDg08\r\ncDZWZIwu4Hf9RwVIsHrmC47Yj/EuwvKladqqO86L4hzxK6UNPq7XEcEzLNi0\r\n4ERul7pDNf7kx+122h/AUBqZgvHccudGBXMsrf6gV3Xzdlb6KpOVmmSdzpqp\r\nhMgFJbDNYdCKOz6twUSVbykGL7hTALCKpHUMb2LxsvUe8IjsCu0sVgjs+5f9\r\nB57GshZS4VpzgDpdZEaA4qTzNobeT7yyROUBEb8JMv2BDfCmsAMU7VEvV9cJ\r\nCQ6AXWatmJmtsGnzoHd00jbwdTEwx1qpWBM=\r\n=Gsnv\r\n-----END PGP SIGNATURE-----\r\n",
+            "size": 3528
+          },
+          "_hasShrinkwrap": false,
+          "hasInstallScript": true
+        },
+        "0.0.6": {
+          "name": "lego-components-react",
+          "version": "0.0.6",
+          "dependencies": {
+            "@nutui/nutui-react": "^1.1.4"
+          },
+          "peerDependencies": {
+            "react": "^17.0.0",
+            "react-dom": "^17.0.0"
+          },
+          "directories": {},
+          "dist": {
+            "integrity": "sha512-ZxYyJHIplAMfU2Nmxera4cFJTCiWGEYn+Q4gMk7EtRwUK7CU85mZxYh5JwNd7I5N47ZjQ4pydRJ9ja/hp1857Q==",
+            "shasum": "529695420ffd9eb05692009f297f70cfe0aa009b",
+            "tarball": "https://registry.npmmirror.com/lego-components-react/-/lego-components-react-0.0.6.tgz",
+            "fileCount": 3,
+            "unpackedSize": 13686,
+            "signatures": [
+              {
+                "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+                "sig": "MEYCIQD10hxOsBZneSQ39oOjpku7yFqC/xkdAQrhgJByj5g+aQIhAKk+d5gbJgZjb6X7vGPfXMk/vXoDyWDHQIBgM/rXDtB0"
+              }
+            ],
+            "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJi4V6QACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmofQw/+LWVAQdm4FxbWQph8zVocJnOzcKCdARPnGCZYT0eIz1B4tIgk\r\naYROIs2jrFTqZGlioBGt8ir4OY4T+LwnuQKJn797sbTCLiKUuu+ZouD6KThc\r\nFdPQJ3jKhm5K/Oo/xj4a8oH/0saF+Dy6ZTmH3HkPXM3UpqFwNvcstnrhONj4\r\nHCzYFqeLPNJtyDTI0z7IJU6mtsFBnZW9DLGQlBr9qJhxTfC15DxfOFEhM+Wm\r\n4xchaBgHVHLKXnTc4KpRRGw6UZJHXx8I4oEtWLQ1BXjlwELgdooHOoNIqu/M\r\nqse7wsmPjnEcX/OvRdwqPbfyeEhj5Y4Z5aGmn23kjRW4y2E/SHdBTMejaMIT\r\noH3LZf9X7O8i3p+UlYBocFddRh26esWwHcusKCTmb/VI63w03L9A4jtuyN3Z\r\nr5XOBzNS7OsMwSlfnaVUCSyGsIle35T4mm554J+DpSbvXpzOU38BflkM7YuG\r\nWpURvYRBttsvf1VUmNndE1YHEAk5TwfS79E8F6RixNX7stuMo/TiS4R2XK2D\r\ndgo45U326tGyeSXvCuRZ3z3Pv7nGN2B+CHWwKVCwPPewp5NYx9aj/IlCEUUA\r\nayjyCF+9ShZ1FyjfDVWQhdOT7lywLjEWtqs9TOBJ0Dg0inthMvN+QMJJVrkf\r\nZrEuP0HROWwULLiQ4bfBzAXDtO2QElx9OME=\r\n=E1NH\r\n-----END PGP SIGNATURE-----\r\n",
+            "size": 4819
+          },
+          "_hasShrinkwrap": false,
+          "hasInstallScript": true
+        }
+      },
+      "cachedAt": 1658939699135
+    },
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "No matching version found for lego-components-react@^0.0.7",
+      "code": "ERR_PNPM_NO_MATCHING_VERSION",
+      "stack": "pnpm: No matching version found for lego-components-react@^0.0.7\n    at resolveNpm (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:85685:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async Object.resolve (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:85867:28)\n    at async run (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:92798:23)"
+    }
+  }
+}
