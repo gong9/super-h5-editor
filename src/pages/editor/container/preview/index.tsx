@@ -50,7 +50,7 @@ const PreView: FC<PreViewProps> = ({ iframeScrollY }) => {
       </div>
 
       <iframe
-        src='http://localhost:3000/#/preview'
+        src='https://lowcode-show-tjrg.vercel.app/#/view'
         width='100%'
         scrolling='yes'
         frameBorder='0'

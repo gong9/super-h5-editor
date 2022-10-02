@@ -37,7 +37,7 @@ const Editor: FC<EditorProps> = ({ currentCacheCopm }) => {
       console.error(error)
     }
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    type === 1 && window.open('http://localhost:3000/#/view', '_blank')
+    type === 1 && window.open('https://lowcode-show-tjrg.vercel.app/#/view', '_blank')
   }
 
   /** 该功能暂时未完善 */
