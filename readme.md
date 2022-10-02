@@ -1,5 +1,7 @@
 # super-h5-ditor
 > 原super-h5-plus 项目拆分
+
+预览地址 [https://super-h5-editor-pqcg.vercel.app/superH5/editor]
 ## 依赖安装
 
 - pnpm i
